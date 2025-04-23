@@ -14,3 +14,13 @@ A general  example will be:
 print <num>;
 ```
 
+# Compilation
+
+``` bufflang
+gcc glicm.h -o glicm
+```
+
+# Execution
+``` bufflang
+glicm test.gcm
+```
