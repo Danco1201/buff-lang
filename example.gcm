@@ -1,2 +1,2 @@
-print 23;
-print 2;
+print 23; // imprime el numero 23
+print 17;
