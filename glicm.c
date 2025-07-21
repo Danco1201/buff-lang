@@ -12,6 +12,10 @@
     fprintf(stderr, "\n"); \
     exit(1); \
 } while (0)
+bool startswith(const char* str, const char* prefix){
+    while (*prefix && *str == *prefix) ++str, ++prefix;
+        return *prefix == 0;
+}
 typedef enum {
     _print,
     intlit,
@@ -114,7 +118,7 @@ tkVec tokenize(const char* value) {
             pushtk(&tokens, s);
             continue;
 
-        } else if (isspace(p)) {
+        } else if (isspace(p) || startswith(p, "//") {
             continue;
         } else {
             fprintf(stderr, "ERROR [line %d, col %d]: invalid character '%c'\n", line, col, p);
